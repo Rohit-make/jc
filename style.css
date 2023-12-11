@@ -1,0 +1,482 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+
+
+
+.header {
+  height: 100vh;
+  width: 98vw;
+  background-image: linear-gradient(rgba(17, 17, 18, 0.7), rgba(7, 7, 7, 0.7)), url(image/back.jpg);
+  opacity: 90%;
+  background-position: center;
+  position: relative;
+}
+
+nav {
+  height: 15vh;
+  width: 98vw;
+  display: flex;
+  background: #4f4e4e;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 100px;
+}
+
+
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+.text-box h1 {
+  font-size: 62px;
+}
+
+.text-box p {
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+
+  border: 1px solid #59d02a;
+  padding: 12px 34px;
+  background: red;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn1 {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #87f69c;
+  padding: 12px 34px;
+  margin-top: 80px;
+  margin-left: 10px;
+  background: red;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  border: 1px solid #1f06f8;
+  background: #fa3503;
+  transition: 1s;
+
+}
+
+.hero-btn1:hover {
+  border: 1px solid #1f06f8;
+  background: #d64e0a;
+  transition: 1s;
+
+}
+
+nav .rohit {
+  display: none;
+}
+
+@media(max-width:700px) {
+  nav img {
+    width: 50px;
+  }
+
+  .text-box h1 {
+    margin-top: 5px;
+    font-size: 15px;
+  }
+
+  .collegename h1 {
+    font-size: 10px;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 150px;
+    top: 0;
+    right: 0px;
+    text-align: left;
+    z-index: 2;
+    display: none;
+    transition: 1s;
+
+  }
+
+  nav .rohit {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+
+  .hero-btn1 {
+    display: inline-block;
+    text-decoration: none;
+    color: #f8cdcd;
+    border: 1px solid #87f69c;
+    padding: 12px 34px;
+    margin-top: 40px;
+    margin-left: 10px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+}
+
+/*----------2016 PASSOUTS--------*/
+.passouts2016 {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p {
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 10px;
+}
+
+.row {
+  width: 88vw;
+  margin: 10px;
+  text-align: center;
+  padding-top: 20px;
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}
+
+.column {
+  height: 60vh;
+
+  border-radius: 10px;
+  /* background: #b9b2f4; */
+  background: rgba(235, 38, 58, 0.7);
+
+  margin-bottom: 30px;
+  margin-left: 30px;
+  position: relative;
+  float: left;
+  width: 25vw;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.column:hover {
+  width: 30vw;
+}
+
+.column img {
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+@media(max-width:700px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .column {
+    width: 80%;
+    height: 60vh;
+    border-radius: 5px;
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 5;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+}
+
+
+/*-------------2017 PASSOUTS--------*/
+
+.passouts2017 {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+
+}
+
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p {
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 10px;
+}
+
+.row1 {
+  width: 88vw;
+  margin: 10px;
+  text-align: center;
+  padding-top: 20px;
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}
+
+.column1 {
+  height: 60vh;
+  border-radius: 10px;
+  /* background: #b9b2f4; */
+  background: rgba(235, 38, 58, 0.7);
+
+  margin-bottom: 30px;
+  margin-left: 30px;
+  position: relative;
+  float: left;
+  width: 25vw;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.column1:hover {
+  width: 30vw;
+}
+
+.column1 img {
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+@media(max-width:700px) {
+  .row1 {
+    flex-direction: column;
+  }
+
+  .column1 {
+
+    width: 80%;
+    height: 60vh;
+    border-radius: 5px;
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 5;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+}
+
+
+
+/*-------------2018 PASSOUTS--------*/
+
+.passouts2018 {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+
+}
+
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p {
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 20px;
+  padding: 10px;
+}
+
+.row2 {
+  width: 88vw;
+  margin: 10px;
+  text-align: center;
+  padding-top: 20px;
+
+  overflow: auto;
+  position: relative;
+  flex: 1;
+}
+
+.column2 {
+  height: 60vh;
+  border-radius: 10px;
+  /* background: #b9b2f4; */
+  background: rgba(235, 38, 58, 0.7);
+
+  margin-bottom: 30px;
+  margin-left: 30px;
+  position: relative;
+  float: left;
+  width: 25vw;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.column2:hover {
+  width: 30vw;
+}
+
+.column2 img {
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+@media(max-width:700px) {
+  .row2 {
+    flex-direction: column;
+  }
+
+  .column2 {
+    width: 80%;
+    height: 60vh;
+    border-radius: 5px;
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 5;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+}
+
+
+
+
+/*-------footer--------*/
+.aboutus {
+  width: 98vw;
+  justify-content: center;
+  padding: 70px;
+}
+
+.a {
+  text-align: center;
+  font-size: 30px;
+
+}
+
+.aboutus p {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.footer {
+  width: 98vw;
+  background: black;
+  justify-content: center;
+}
+
+.footer p {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+}

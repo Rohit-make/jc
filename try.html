@@ -1,0 +1,66 @@
+const storedData1 = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [];
+
+// Check if data exists in localStorage
+if (storedData1) {
+  const data1 = JSON.parse(storedData1);
+
+  // Store the data in a variable for use on this page
+  const appointment_time = data1.appointment_time;
+  const userid = data1.userid;
+  if (userid == 30) {
+    document.getElementById("y").innerHTML = ("Free Appoinment Time =" + appointment_time);
+  }
+  // You can perform further actions with the data here
+}
+
+
+function storeData(userid, appointment_time) {
+  const data = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [];
+  data.push({ userid, appointment_time });
+  localStorage.setItem('data', JSON.stringify(data));
+}
+
+// Handle form submission
+document.getElementById("data-form").addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent form submission
+  const userid = document.getElementById("userid").value;
+  const appointment_time = document.getElementById("appointment_time").value;
+
+  storeData(userid, appointment_time);
+  document.getElementById("data-form").reset(); // Clear form inputs
+  alert('data update successfully!');
+  window.location.assign('index.html');
+});
+
+
+
+console.log(data1[0].appointment_time)
+        for (let i = 0; i < data1.length; i++) {
+          if (data1[i].userid == targetId) {
+            data1[i].appointment_time = newAge;
+            console.log(data1[i].appointment_time);
+            data1.push({ userid, appointment_time });
+            // localStorage.setItem('data1', JSON.stringify(data1));
+            break; // Exit the loop once the update is done
+          }
+          else {
+
+
+
+function storeData1() {
+  // Get the input values
+  const appointment_time = document.getElementById("appointment_time").value;
+  const userid = document.getElementById("userid").value;
+  // Create an object to store the data
+  const doctordata = {
+    appointment_time: appointment_time,
+    userid: userid
+
+  };
+
+  // Store the data in localStorage
+  localStorage.setItem("doctordata", JSON.stringify(doctordata));
+  document.getElementById("data-form").reset();
+  // Redirect to another page (e.g., display.html)
+  window.location.href = "index.html";
+}

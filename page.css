@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("image/college.jpg");
+  background-size: 100%;
+  background-position: 00px 0px;
+}
+
+div.main {
+  width: 450px;
+  height: 300px;
+  margin: 100px auto 0px auto;
+  background: #29dcef;
+  text-align: center;
+}
+
+form#data-form {
+  height: 150px;
+  background: #ff8be4;
+  text-align: center;
+  position: relative;
+  margin: 40px;
+}
+
+label {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-style: italic;
+}
+
+input#appointment_time {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: 0;
+  padding: 7px;
+  background-color: #fff;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+input#userid {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: 0;
+  padding: 7px;
+  background-color: #fff;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Appointment Time </title>
+  <link rel="stylesheet" href="page.css">
+  <style>
+    button {
+      margin-top: 20px;
+      display: inline;
+      width: 100px;
+      background-color: orangered;
+      padding: 20px;
+      color: #ffffff;
+      text-align: center;
+      border: 4px double#cccccc;
+      border-radius: 10px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="main">
+    <h1>Set Appointment_time</h1>
+
+    <!-- Create a form with input fields -->
+    <form id="data-form">
+      <label for="userid">User Id:</label>
+      <input type="text" id="userid" name="name" required><br>
+      <label for="appointment_time">Appointment_time:</label>
+      <input type="text" id="appointment_time" name="name" required><br>
+
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+
+      function storeData1(userid, appointment_time) {
+        const data1 = localStorage.getItem('data1') ? JSON.parse(localStorage.getItem('data1')) : [];
+
+        const targetId = document.getElementById("userid").value;
+        const newAge = document.getElementById("appointment_time").value;
+        console.log(data1[0].appointment_time)
+        for (let i = 0; i < data1.length; i++) {
+          if (data1[i].userid === targetId) {
+            data1[i].appointment_time = newAge;
+            console.log(data1[i].appointment_time);
+            //data1.push({ userid, appointment_time });
+
+            localStorage.setItem('data1', JSON.stringify(data1));
+            break;
+            // Exit the loop once the update is done
+          }
+
+
+
+        }
+        // data1.push({ userid, appointment_time });
+        localStorage.setItem('data1', JSON.stringify(data1));
+
+      }
+
+      // Handle form submission
+      document.getElementById("data-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission
+        const userid = document.getElementById("userid").value;
+        const appointment_time = document.getElementById("appointment_time").value;
+
+        storeData1(userid, appointment_time);
+        document.getElementById("data-form").reset(); // Clear form inputs
+        alert('data update successfully!');
+        window.location.assign('index.html');
+      });
+    </script>
+  </div>
+</body>
+
+</html>

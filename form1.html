@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>option form</title>
+  <link rel="stylesheet" href="style1.css">
+  <style>
+    button {
+      display: inline;
+      width: 100px;
+      background-color: orangered;
+      padding: 20px;
+      color: #ffffff;
+      text-align: center;
+      border: 4px double#cccccc;
+      border-radius: 10px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main" id="main">
+    <div class="option">
+      <h2>click on correct option</h2>
+      <form id="option" method="post">
+        <div class="f">
+          <button type="button" id="button" onclick="showmenu()">DOCTOR</button>
+          <br>
+
+          <button type="button" onclick="location.href='patient.html'">PATIENTS</button>
+          <br>
+        </div>
+        <script>
+
+          var button = document.getElementById("button");
+
+          function showmenu() {
+
+            main.style.display = "none";
+            main1.style.display = "block";
+          }
+        </script>
+      </form>
+    </div>
+
+  </div>
+  <div class="main1" id="main1">
+    <div class="option1">
+      <h2>Log In</h2>
+      <form onsubmit="ram()" id="popup" method="post">
+        <div class="p">
+          <label>User Id:</label>
+          <br>
+          <input type="password" name="password" id="userid" placeholder="Enter Your User Id">
+          <br><br>
+          <label>Password :</label>
+          <br>
+          <input type="password" name="password" id="name" placeholder="Enter Your Id Password">
+          <br><br>
+          <input type="submit" value="submit" name="submit" id="submit">
+        </div>
+      </form>
+      <script>
+        function ram() {
+          var password = document.getElementById("name").value;
+          var userid = document.getElementById("userid").value;
+          if (password == 30 && userid == 30) {
+            window.location.assign('page.html');
+            alert("successful......")
+
+          }
+          else if (password == 10 && userid == 10) {
+            window.location.assign('page.html');
+            alert("successful......")
+          }
+          else if (password == 20 && userid == 20) {
+            window.location.assign('page.html');
+            alert("successful......")
+          }
+          else if (password == 8 && userid == 8) {
+            window.location.assign('page.html');
+            alert("successful......")
+          }
+          else if (password == 7 && userid == 7) {
+            window.location.assign('page.html');
+            alert("successful......")
+          }
+          else if (password == 9 && userid == 9) {
+            window.location.assign('page.html');
+            alert("successful......")
+          }
+          else if (password == 11 && userid == 11) {
+            window.location.assign('page.html');
+            alert("successful......")
+          }
+          else if (password == 12 && userid == 12) {
+            window.location.assign('page.html');
+            alert("successful......")
+          }
+          else if (password == 13 && userid == 13) {
+            window.location.assign('page.html');
+            alert("successful......")
+          }
+          else {
+            window.location.assign('index.html');
+            alert("your input Password is wrong TRY AGAIN....");
+          }
+
+        }
+
+
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Booking Page</title>
+  <link rel="stylesheet" href="patient.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="slot">
+      <h2>Slot Booking Form</h2>
+      <p>NOTICE:-You have to paid Slot Booking Chage after visit</p>
+
+      <!-- Form to input data -->
+      <form id="dataForm">
+        <label for="name">Doctor Id:</label>
+        <input type="text" id="doctorid" name="name" required>
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="name">Gender:</label>
+        <input type="text" id="gender" name="name" required>
+        <br>
+        <label for="name">number:</label>
+        <input type="text" id="number" name="name" required>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+        <br>
+        <button type="submit">Submit</button>
+        <br>
+
+      </form>
+
+      <script>
+        // Function to store data in local storage
+        function storeData(doctorid, name, gender, number, age) {
+          const data = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [];
+          data.push({ doctorid, name, gender, number, age });
+          localStorage.setItem('data', JSON.stringify(data));
+        }
+
+        // Handle form submission
+        document.getElementById("dataForm").addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+          const doctorid = document.getElementById("doctorid").value;
+          const name = document.getElementById("name").value;
+          const gender = document.getElementById("gender").value;
+          const number = document.getElementById("number").value;
+          const age = document.getElementById("age").value;
+          storeData(doctorid, name, gender, number, age);
+          document.getElementById("dataForm").reset(); // Clear form inputs
+          alert('Slot Booked successfully!');
+          window.location.assign('index.html');
+        });
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

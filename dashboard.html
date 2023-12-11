@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DASHBOARD</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+  <div class="main1" id="main1">
+    <div class="option1">
+      <h2>LOGIN TO DASHBOARD</h2>
+      <div class="popup" method="post">
+        <div class="p">
+          <label>User id :</label>
+          <br>
+          <input type="password" name="password" id="userid" placeholder="Enter Your Id Password">
+          <br><br>
+          <label>Password :</label>
+          <br>
+          <input type="password" name="password" id="name" placeholder="Enter Your Id Password">
+          <br><br>
+          <input type="submit" value="submit" name="submit" id="submit" onclick="ram()">
+        </div>
+      </div>
+      <script>
+
+        function ram() {
+          var password = document.getElementById("name").value;
+          var userid = document.getElementById("userid").value;
+          if (password == 30 && userid == 30) {
+            alert("Your password is correct And you are Log in!!!!");
+            main.style.display = "block";
+            main1.style.display = "none";
+          }
+          else if (password == 30 && userid == 30) {
+            alert("Your password is correct And you are Log in!!!!");
+            main.style.display = "block";
+            main1.style.display = "none";
+          }
+          else if (password == 10 && userid == 10) {
+            alert("Your password is correct And you are Log in!!!!");
+            main.style.display = "block";
+            main1.style.display = "none";
+          }
+          else if (password == 20 && userid == 20) {
+            alert("Your password is correct And you are Log in!!!!");
+            main.style.display = "block";
+            main1.style.display = "none";
+          }
+          else if (password == 7 && userid == 7) {
+            alert("Your password is correct And you are Log in!!!!");
+            main.style.display = "block";
+            main1.style.display = "none";
+          }
+          else if (password == 8 && userid == 8) {
+            alert("Your password is correct And you are Log in!!!!");
+            main.style.display = "block";
+            main1.style.display = "none";
+          }
+          else if (password == 9 && userid == 9) {
+            alert("Your password is correct And you are Log in!!!!");
+            main.style.display = "block";
+            main1.style.display = "none";
+          }
+          else if (password == 11 && userid == 11) {
+            alert("Your password is correct And you are Log in!!!!");
+            main.style.display = "block";
+            main1.style.display = "none";
+          }
+          else if (password == 12 && userid == 12) {
+            alert("Your password is correct And you are Log in!!!!");
+            main.style.display = "block";
+            main1.style.display = "none";
+          }
+          else if (password == 13 && userid == 13) {
+            alert("Your password is correct And you are Log in!!!!");
+            main.style.display = "block";
+            main1.style.display = "none";
+          }
+          else {
+            window.location.assign('index.html');
+            alert("your input Password is wrong TRY AGAIN....");
+          }
+
+        }
+
+
+      </script>
+    </div>
+  </div>
+  <div class="main" id="main">
+    <h1>-:DASHBOARD:-</h1>
+
+    <!-- Create a table to display the data -->
+    <table id="dataTable" border="1">
+      <thead>
+        <tr>
+          <th>Doctor Id</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Number</th>
+          <th>Age</th>
+          <th>Visited</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be inserted here dynamically -->
+      </tbody>
+    </table>
+
+    <script>
+      // Function to retrieve and display data from local storage
+      function displayData() {
+        const data = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [];
+        const table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+
+        for (const item of data) {
+          const newRow = table.insertRow(table.rows.length);
+          const cell1 = newRow.insertCell(0);
+          const cell2 = newRow.insertCell(1);
+          const cell3 = newRow.insertCell(2);
+          const cell4 = newRow.insertCell(3);
+          const cell5 = newRow.insertCell(4);
+          const cell6 = newRow.insertCell(5);
+
+          cell1.innerHTML = item.doctorid;
+          cell2.innerHTML = item.name;
+          cell3.innerHTML = item.gender;
+          cell4.innerHTML = item.number;
+          cell5.innerHTML = item.age;
+
+          const deleteButton = document.createElement("button");
+          deleteButton.innerHTML = "Delete";
+          deleteButton.onclick = function () {
+            // Remove the row and update local storage
+            table.deleteRow(newRow.rowIndex - 1);
+            const newData = data.filter((d) => d.doctorid !== item.doctorid || d.name !== item.name || d.gender !== item.gender || d.number !== item.number || d.age !== item.age);
+            localStorage.setItem('data', JSON.stringify(newData));
+          };
+
+          cell6.appendChild(deleteButton);
+        }
+      }
+      // Call the function to display data when the page loads
+      displayData();
+    </script>
+  </div>
+</body>
+
+</html>
